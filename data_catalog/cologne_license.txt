@@ -1,0 +1,4 @@
+Dataset: Accelerometric Classification of Resting and Postural Tremor Amplitude
+© 2023 by Christina van der Linden; Till Anselm Dembek
+is licensed under Attribution-NonCommercial-ShareAlike 4.0 International.
+To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/

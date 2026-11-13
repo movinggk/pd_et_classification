@@ -1,0 +1,3 @@
+# Python 3.12 recommended. Combines the already-used, pinned model libraries.
+-r requirements.txt
+-r requirements-transformer.txt

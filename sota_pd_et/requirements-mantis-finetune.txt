@@ -1,0 +1,2 @@
+# The fine-tuner uses the same pinned Mantis package and numerical environment.
+-r requirements-transformer.txt

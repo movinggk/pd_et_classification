@@ -1,0 +1,10 @@
+# Portable dependency specification for the frozen MantisV2 experiment.
+# Create a separate Python 3.12 environment; this is not an exact environment lock.
+mantis-tsfm==1.1.0
+torch>=2.2,<3
+numpy>=1.26,<3
+scipy>=1.11,<2
+scikit-learn>=1.4,<2
+joblib>=1.3,<2
+threadpoolctl>=3.2,<4
+tqdm>=4.66,<5

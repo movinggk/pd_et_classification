@@ -1,53 +1,119 @@
-# Only the foundation model comparison and its supporting files are eligible
-# for Git tracking. Everything else is ignored by default.
-*
-!/.gitignore
-!/README.md
+# Track project source, notebooks, tests, templates, configuration, requirements,
+# documentation, and licenses by default. Keep the same relative directory layout
+# on other machines; recreate environments and download datasets/weights there.
 
-# Portable dataset setup: fetch and verify the release on the target machine.
-# The downloaded release and locally generated acquisition records stay ignored.
-!/scripts/
-!/scripts/acquire_pads.py
-!/scripts/inspect_pads.py
-!/data/
-!/data/pads/
-!/data/pads/README.md
+# Operating-system metadata and editor temporary files
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+*~
+*.swp
+*.swo
 
-# Comparison entry points, documentation, and dependency specifications.
-!/sota_pd_et/
-!/sota_pd_et/__init__.py
-!/sota_pd_et/compare_foundations.py
-!/sota_pd_et/predict_foundation.py
-!/sota_pd_et/FOUNDATION_COMPARISON_README.md
-!/sota_pd_et/requirements-foundations.txt
-# Optional record of the original macOS environment. For another platform,
-# install requirements-foundations.txt rather than this platform-specific lock.
-!/sota_pd_et/requirements-foundations-lock-macos.txt
+# Local Python environments
+.venv/
+.venv-*/
+venv/
+env/
+.conda/
 
-# Shared modules imported by the comparison and its evaluation helpers.
-!/sota_pd_et/data.py
-!/sota_pd_et/evaluate.py
-!/sota_pd_et/evaluate_transformer.py
-!/sota_pd_et/model.py
-!/sota_pd_et/transformer.py
-!/sota_pd_et/hydra_gpu.py
-
-# Encoder adapters, training utilities, and vendored source with its licenses.
-!/sota_pd_et/foundations/
-!/sota_pd_et/foundations/**/
-!/sota_pd_et/foundations/**/*.py
-!/sota_pd_et/foundations/_vendor/PROVENANCE.json
-!/sota_pd_et/foundations/_vendor/*/LICENSE
-
-# Tests for this comparison, including shared protocol tests and fixtures.
-!/sota_pd_et/tests/
-!/sota_pd_et/tests/__init__.py
-!/sota_pd_et/tests/foundation_fixtures.py
-!/sota_pd_et/tests/test_foundation_*.py
-!/sota_pd_et/tests/test_transformer_protocol.py
-
-# Keep generated files ignored even inside allowed source directories.
+# Python bytecode, JIT caches, and tool caches
 __pycache__/
 *.py[cod]
+*.nbc
+*.nbi
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
 .ipynb_checkpoints/
-.DS_Store
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Build and packaging outputs
+build/
+dist/
+*.egg-info/
+.eggs/
+node_modules/
+
+# Local environment settings (keep distributable templates)
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+
+# Downloaded datasets and generated acquisition records; keep data documentation.
+/data/**
+!/data/**/
+!/data/**/README*
+!/data/**/LICENSE*
+
+# Data-search downloads and metadata; retain the acquisition/search source code.
+/data_catalog/**
+!/data_catalog/**/
+!/data_catalog/**/*.py
+!/data_catalog/**/*.sh
+!/data_catalog/**/*.ipynb
+!/data_catalog/**/README*
+!/data_catalog/**/LICENSE*
+!/data_catalog/**/*license*.txt
+!/data_catalog/**/*readme*.txt
+
+# Model downloads, experiment results, and temporary working files
+/models/
+/artifacts/
+/tmp/
+/demonstration/outputs/
+
+# Generated exports; retain LaTeX figure source for rebuilding documents.
+/output/**
+!/output/**/
+!/output/**/*.tex
+
+# Generated report audit records (keep report builders and templates)
+/MantisV2_FineTune_Report/*.json
+/Temporal_CrossTask_Report/*.json
+
+# Data tables, binary arrays, model checkpoints, and duplicate source bundles
+*.csv
+*.tsv
+*.xls
+*.xlsx
+*.npy
+*.npz
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.joblib
+*.pkl
+*.pickle
+*.onnx
+*.zip
+
+# LaTeX build products (keep .tex sources and source images)
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.pdf
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
