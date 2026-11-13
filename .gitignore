@@ -1,0 +1,41 @@
+# Only the foundation model comparison and its supporting files are eligible
+# for Git tracking. Everything else is ignored by default.
+*
+!/.gitignore
+
+# Comparison entry points, documentation, and dependency specifications.
+!/sota_pd_et/
+!/sota_pd_et/__init__.py
+!/sota_pd_et/compare_foundations.py
+!/sota_pd_et/predict_foundation.py
+!/sota_pd_et/FOUNDATION_COMPARISON_README.md
+!/sota_pd_et/requirements-foundations.txt
+!/sota_pd_et/requirements-foundations-lock-macos.txt
+
+# Shared modules imported by the comparison and its evaluation helpers.
+!/sota_pd_et/data.py
+!/sota_pd_et/evaluate.py
+!/sota_pd_et/evaluate_transformer.py
+!/sota_pd_et/model.py
+!/sota_pd_et/transformer.py
+!/sota_pd_et/hydra_gpu.py
+
+# Encoder adapters, training utilities, and vendored source with its licenses.
+!/sota_pd_et/foundations/
+!/sota_pd_et/foundations/**/
+!/sota_pd_et/foundations/**/*.py
+!/sota_pd_et/foundations/_vendor/PROVENANCE.json
+!/sota_pd_et/foundations/_vendor/*/LICENSE
+
+# Tests for this comparison, including shared protocol tests and fixtures.
+!/sota_pd_et/tests/
+!/sota_pd_et/tests/__init__.py
+!/sota_pd_et/tests/foundation_fixtures.py
+!/sota_pd_et/tests/test_foundation_*.py
+!/sota_pd_et/tests/test_transformer_protocol.py
+
+# Keep generated files ignored even inside allowed source directories.
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store

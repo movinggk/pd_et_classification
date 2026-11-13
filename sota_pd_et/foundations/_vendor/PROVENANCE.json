@@ -1,0 +1,37 @@
+[
+  {
+    "source_url": "https://github.com/YunshiWen/VQShape/blob/24fc507461e17b4b8485d5f097aa91eaef98ae67/vqshape/model.py",
+    "source_sha256": "aa586f82f4ee2a726e7f2c3fd912322337784dd65012b62221db8e72bdc379b5",
+    "vendored_file": "sota_pd_et/foundations/_vendor/vqshape/model.py",
+    "vendored_sha256": "7af2cfefac7edfdd6b6e5bfbdd530a3b92a29eae1973e5aca47ab2fd8c5039e6",
+    "changes": "Relative networks import only."
+  },
+  {
+    "source_url": "https://github.com/YunshiWen/VQShape/blob/24fc507461e17b4b8485d5f097aa91eaef98ae67/vqshape/networks.py",
+    "source_sha256": "47d4048312702eda2453add9fce2a0228dfdf1f373cba70d90bee7f96a217c2c",
+    "vendored_file": "sota_pd_et/foundations/_vendor/vqshape/networks.py",
+    "vendored_sha256": "47d4048312702eda2453add9fce2a0228dfdf1f373cba70d90bee7f96a217c2c",
+    "changes": "None."
+  },
+  {
+    "source_url": "https://github.com/YunshiWen/VQShape/blob/24fc507461e17b4b8485d5f097aa91eaef98ae67/LICENSE",
+    "source_sha256": "2264b9137a904033938077ed6cdb61c134a8784075d6f5315f0423e8a34ae994",
+    "vendored_file": "sota_pd_et/foundations/_vendor/vqshape/LICENSE",
+    "vendored_sha256": "2264b9137a904033938077ed6cdb61c134a8784075d6f5315f0423e8a34ae994",
+    "changes": "None."
+  },
+  {
+    "source_url": "https://github.com/ExplainableML/TiViT/blob/c74a76ffc4197c6d2d5d766c8c90d438efb88cfd/src/tivit.py",
+    "source_sha256": "85b57cc21dbf593ace2b899bbae836feca8fb013cf02df0554ae90492ef4ad89",
+    "vendored_file": "sota_pd_et/foundations/_vendor/tivit/tivit.py",
+    "vendored_sha256": "85b57cc21dbf593ace2b899bbae836feca8fb013cf02df0554ae90492ef4ad89",
+    "changes": "None."
+  },
+  {
+    "source_url": "https://github.com/ExplainableML/TiViT/blob/c74a76ffc4197c6d2d5d766c8c90d438efb88cfd/LICENSE",
+    "source_sha256": "3493a37d906057b04439b647af2518dbb6b4c5efe82cee44a3ed63a384e1d3e0",
+    "vendored_file": "sota_pd_et/foundations/_vendor/tivit/LICENSE",
+    "vendored_sha256": "3493a37d906057b04439b647af2518dbb6b4c5efe82cee44a3ed63a384e1d3e0",
+    "changes": "None."
+  }
+]

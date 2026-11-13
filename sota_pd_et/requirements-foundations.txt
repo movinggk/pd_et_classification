@@ -1,0 +1,21 @@
+# Python 3.12. A separate environment is strongly recommended.
+torch==2.11.0
+torchvision==0.26.0
+transformers==4.57.6
+numpy==2.2.6
+scipy>=1.15,<2
+scikit-learn==1.7.2
+joblib>=1.4,<2
+threadpoolctl>=3.5,<4
+tqdm>=4.67,<5
+huggingface-hub>=0.34,<1
+safetensors>=0.6,<1
+einops==0.8.1
+accelerate>=1.10,<2
+mantis-tsfm==1.1.0
+tirex-ts==1.4.2
+chronos-forecasting==2.3.2
+granite-tsfm==0.3.12
+open_clip_torch==2.32.0
+# The PyPI MOMENT release pins incompatible old dependencies. Use this commit.
+momentfm @ git+https://github.com/moment-timeseries-foundation-model/moment.git@38f7310ad594100747ca2a8357e9c7ca7d323e0e
