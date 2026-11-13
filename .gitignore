@@ -2,6 +2,16 @@
 # for Git tracking. Everything else is ignored by default.
 *
 !/.gitignore
+!/README.md
+
+# Portable dataset setup: fetch and verify the release on the target machine.
+# The downloaded release and locally generated acquisition records stay ignored.
+!/scripts/
+!/scripts/acquire_pads.py
+!/scripts/inspect_pads.py
+!/data/
+!/data/pads/
+!/data/pads/README.md
 
 # Comparison entry points, documentation, and dependency specifications.
 !/sota_pd_et/
@@ -10,6 +20,8 @@
 !/sota_pd_et/predict_foundation.py
 !/sota_pd_et/FOUNDATION_COMPARISON_README.md
 !/sota_pd_et/requirements-foundations.txt
+# Optional record of the original macOS environment. For another platform,
+# install requirements-foundations.txt rather than this platform-specific lock.
 !/sota_pd_et/requirements-foundations-lock-macos.txt
 
 # Shared modules imported by the comparison and its evaluation helpers.
