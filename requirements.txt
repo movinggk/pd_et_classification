@@ -1,0 +1,12 @@
+# Complete portable Python 3.12 environment for this repository.
+# Includes every classification pipeline, prediction, tests, report builders,
+# plotting, the Fourier demonstration, and notebook execution/editing.
+# Install from the repository root: python -m pip install -r requirements.txt
+# Git must be installed for the immutable MOMENT source requirement.
+# Dataset/model downloads and the TeX toolchain are separate setup steps.
+-r sota_pd_et/requirements.txt
+-r sota_pd_et/requirements-foundations.txt
+-r demonstration/requirements.txt
+
+# Browser interface for opening and running the included notebooks.
+jupyterlab>=4,<5

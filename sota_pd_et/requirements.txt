@@ -1,6 +1,11 @@
-# Use a separate Python 3.12 environment. aeon 1.6.0 constrains the numerical stack.
-# The existing .venv-demo has newer NumPy/SciPy versions outside those constraints.
+# Portable Python 3.12 baseline classification and plotting requirements.
+# For every model, demonstration, and notebook, use ../requirements.txt.
+# aeon 1.6.0 constrains the numerical stack and its private HYDRA scaler API.
 aeon==1.6.0
+numpy>=2,<2.5
+scipy>=1.15,<1.18
+scikit-learn>=1.6,<1.10
 torch>=2.2,<3
 joblib>=1.3,<2
 threadpoolctl>=3.2,<4
+matplotlib>=3.9,<4

@@ -30,15 +30,21 @@ Use **Python 3.12** and a separate environment. From the project root:
 
 ```sh
 python3.12 -m venv .venv-foundations
-.venv-foundations/bin/python -m pip install -r sota_pd_et/requirements-foundations.txt
+.venv-foundations/bin/python -m pip install -r requirements.txt
 .venv-foundations/bin/python -m pip check
 ```
 
-The requirements pin the model packages, PyTorch 2.11.0, torchvision 0.26.0,
-Transformers 4.57.6, and scikit-learn 1.7.2. MOMENT is installed from an immutable
-upstream commit because its PyPI release pins dependencies that conflict with
-the other models. This is one jointly tested environment. The actual resolved
-macOS environment is recorded in `requirements-foundations-lock-macos.txt`;
+The repository-root `requirements.txt` installs every pipeline, plotting,
+report builders, and notebook tools. For only this model comparison, the narrower
+`sota_pd_et/requirements-foundations.txt` remains available. Git must be installed
+for the MOMENT source dependency. Use a fresh environment rather than combining
+the historical platform-specific lock files. The portable requirements pin the
+model packages, PyTorch 2.11.0, torchvision 0.26.0, Transformers 4.57.6, and
+scikit-learn 1.7.2. MOMENT is installed from an immutable upstream commit because
+its PyPI release pins dependencies that conflict with the other models.
+SciPy is limited to below 1.18 for compatibility with aeon in the complete
+environment. The original resolved macOS environment is recorded in
+`requirements-foundations-lock-macos.txt`;
 prefer the portable requirements file for Linux/CUDA rather than installing
 the macOS lock unchanged.
 

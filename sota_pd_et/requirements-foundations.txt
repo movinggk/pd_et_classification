@@ -1,9 +1,11 @@
 # Python 3.12. A separate environment is strongly recommended.
+# Model-specific profile; use the repository-root requirements.txt for all code.
 torch==2.11.0
 torchvision==0.26.0
 transformers==4.57.6
 numpy==2.2.6
-scipy>=1.15,<2
+# Also compatible with aeon==1.6.0 when installing the complete environment.
+scipy>=1.15,<1.18
 scikit-learn==1.7.2
 joblib>=1.4,<2
 threadpoolctl>=3.5,<4

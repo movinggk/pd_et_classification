@@ -1,0 +1,13 @@
+# Portable Python 3.12 requirements for building/executing the demonstration.
+# Compatible with the classification/foundation stack in ../requirements.txt.
+# requirements-lock.txt is the historical demonstration-only environment.
+numpy>=2,<2.5
+scipy>=1.15,<1.18
+matplotlib>=3.9,<4
+plotly>=6,<8
+nbformat>=5.10,<6
+nbclient>=0.10,<1
+jupyter-client>=8,<9
+ipykernel>=6.29,<8
+ipython>=8.18,<10
+matplotlib-inline>=0.1,<1

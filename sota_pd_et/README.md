@@ -73,12 +73,17 @@ Run from the project root, using Python 3.12:
 ```sh
 python3.12 -m venv .venv-sota
 .venv-sota/bin/python -m pip install --upgrade pip
-.venv-sota/bin/python -m pip install -r sota_pd_et/requirements-lock.txt
+.venv-sota/bin/python -m pip install -r requirements.txt
+.venv-sota/bin/python -m pip check
 ```
 
-The existing `.venv-demo` has NumPy/SciPy versions outside aeon 1.6.0's allowed
-ranges. Keep the model environment separate. PyTorch is needed for HYDRA; the
-command-line default is CPU. Pass `--hydra-device auto` or `--hydra-device cuda`
+The repository-root `requirements.txt` installs all model pipelines, plotting,
+report builders, and notebook tools with compatible numerical versions. For only
+this baseline and its plotting utilities, use `sota_pd_et/requirements.txt`
+instead. The historical demonstration lock has NumPy/SciPy versions outside
+aeon 1.6.0's allowed ranges; do not combine historical environment locks.
+PyTorch is needed for HYDRA; the command-line default is CPU.
+Pass `--hydra-device auto` or `--hydra-device cuda`
 to use CUDA for HYDRA after installing a compatible CUDA-enabled PyTorch build.
 The Colab notebook handles that installation automatically. MPS is not a backend
 for this HYDRA implementation. Installation needs Internet access; the experiment

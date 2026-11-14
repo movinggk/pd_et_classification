@@ -77,9 +77,17 @@ Run from the project root, with Python 3.12:
 
 ```sh
 python3.12 -m venv .venv-demo
-.venv-demo/bin/python -m pip install -r demonstration/requirements-lock.txt
+.venv-demo/bin/python -m pip install -r demonstration/requirements.txt
+.venv-demo/bin/python -m pip check
 .venv-demo/bin/python -m demonstration.build_demo
 ```
+
+The portable `demonstration/requirements.txt` includes the plotting libraries,
+notebook client/format tools, and Python kernel. The historical
+`requirements-lock.txt` records the original demonstration-only environment;
+use the portable file on another machine. Alternatively, the repository-root
+`requirements.txt` installs the demonstration together with every model pipeline
+and JupyterLab in one environment.
 
 The build regenerates figures, data tables, the offline HTML, and the notebook; it then executes every notebook code cell using that same interpreter. Notebook execution needs permission to open local kernel connections. No globally registered Jupyter kernel is required.
 

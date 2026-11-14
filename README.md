@@ -28,13 +28,26 @@ The demonstration compares PD and ET through descriptive participant-level spect
 
 Git includes the project source and setup scripts. Datasets, downloaded model weights, local Python environments, experiment results, and generated exports are excluded by `.gitignore`. A fresh clone therefore needs a separate dataset download before classification can run. The comparison runner does not download the dataset automatically.
 
-Run the commands below from the **repository root**, the directory containing this `README.md`, `scripts/`, and `sota_pd_et/`. Use **Python 3.12** and activate the environment in which you installed the foundation comparison requirements. In that environment, install the portable requirements if needed:
+Run the commands below from the **repository root**, the directory containing this `README.md`, `scripts/`, and `sota_pd_et/`. Use **Python 3.12**, create a virtual environment, and activate it. For example, on macOS/Linux:
 
 ```sh
-python -m pip install -r sota_pd_et/requirements-foundations.txt
+python3.12 -m venv .venv
+source .venv/bin/activate
 ```
 
-Use that requirements file on the target machine; `requirements-foundations-lock-macos.txt` records the original macOS environment and is not a universal cross-platform lock. See the [foundation comparison guide](sota_pd_et/FOUNDATION_COMPARISON_README.md) for environment and device setup.
+On Windows, create the environment with `py -3.12 -m venv .venv` and activate it in PowerShell with `.venv\Scripts\Activate.ps1`. Then, on either platform, install **all repository Python dependencies**:
+
+```sh
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python -m pip check
+```
+
+The root [`requirements.txt`](requirements.txt) includes the baseline classifier, all eight foundation encoders, temporal/cross-task and Mantis fine-tuning, prediction, tests, plotting, report builders, the Fourier demonstration, and Jupyter notebook execution and editing. It combines the model profiles with the portable demonstration requirements. In particular, SciPy stays below 1.18 to satisfy aeon, while the foundation model versions remain pinned. The narrower files under `sota_pd_et/` install specific workflows; they do not each provide the full repository environment.
+
+**Git must be installed and available on `PATH`** because MOMENT is installed from an immutable upstream commit. The historical `*-lock*.txt` files record separate original environments and are not universal cross-platform locks; do not combine those locks with this installation. For NVIDIA hardware, use the matching CUDA-enabled PyTorch 2.11.0/torchvision 0.26.0 builds for your system. See the [foundation comparison guide](sota_pd_et/FOUNDATION_COMPARISON_README.md) for device selection.
+
+Datasets, pretrained weights, and previous experiment artifacts are not Python packages and must be acquired separately. Compiling the LaTeX reports also requires a system TeX distribution with XeLaTeX, `latexmk`, ko.TeX, TikZ, and PGFPlots; pip does not install those tools. See the individual report guides for compilation and font requirements.
 
 ### Download the verified classification inputs
 
